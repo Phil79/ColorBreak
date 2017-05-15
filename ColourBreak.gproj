@@ -1,0 +1,24 @@
+<project>
+ <properties winrt_package="com.yourdomain.yourapp" splashScaleMode="0" html5_host="" html5_pack="0" html5_mem="256" app_icon="" mouseTouchOrder="0" osx_category="5" iosDevice="0" winrt_org="GiderosMobile" windowWidth="0" build_number="1" splash_h_image="" touchToMouse="1" win_domain="giderosmobile.com" osx_org="GiderosMobile" disableSplash="0" encryptCode="0" packageName="com.yourdomain.yourapp" win_org="GiderosMobile" encryptAssets="0" osx_bundle="com.yourdomain." windowHeight="0" osx_domain="giderosmobile.com" architecture="0" autorotation="0" ios_bundle="com.yourdomain." orientation="0" logicalWidth="320" logicalHeight="480" splash_v_image="" exportMode="0" version="1.0" fps="60" tv_icon="" version_code="1" retinaDisplay="0" android_template="0" mouseToTouch="1" app_name="" scaleMode="0" backgroundColor="#ffffff">
+  <imageScales/>
+  <plugins/>
+  <exports/>
+ </properties>
+ <folder name="scripts">
+  <file source="scripts/ring_class.lua"/>
+  <file source="scripts/load.lua"/>
+  <file source="scripts/level_class.lua"/>
+  <file source="scripts/get_Image.lua"/>
+  <file source="scripts/disp_Image.lua"/>
+  <file source="scripts/center_class.lua"/>
+  <file source="scripts/button.lua"/>
+  <file source="scripts/block_class.lua"/>
+  <file source="button.lua"/>
+ </folder>
+ <folder name="pictures">
+  <file source="pictures/background.png"/>
+  <file source="pictures/ring.png"/>
+  <file source="pictures/rings6.png"/>
+ </folder>
+ <file source="main.lua"/>
+</project>

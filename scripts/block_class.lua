@@ -1,74 +1,47 @@
 
 
+
 --block Class
-local block = {} -- table representing class planet
-block.__index = block --failed table lookups should fall back to class table to get methods 
-	
-function block.new(center_x, center_y, radius, outer_rad, inner_rad, outer_arc, inner_arc, colour, image)
-	local self = setmetatable({}, block)
-  self.center_x = center_x
-  self.center_y = center_y
-  self.inner_arc = inner_arc
-  self.outer_arc = outer_arc
-  self.inner_rad = inner_rad
-  self.outer_rad = outer_rad
+
+local block = Core.class(Sprite)
+
+
+--block.__index = level
+
+function block:init(colour,in_rad, out_rad, theta_f, theta_i, image)
+  --local self = setmetatable({}, block)
+
   self.colour = colour
+  self.in_rad = in_rad
+  self.out_rad = out_rad
+  self.theta_f = theta_f
+  self.theta_i = theta_i
   self.image = image
-  return self
+  --return self
 end
 
-function block.set_center_x(self, val)
-  self.center_x = val
-end
+function
 
-function block.get_center_x(self)
-  return self.center_x
-end
+  --METHODS
 
-function block.set_center_y(self, val)
-  self.center_y = val
-end
+-- --determines arc length
+-- function block.arc(self)
+--   local angle_len = math.rad(22.5)
+--   local in_ratio = (2*math.pi)/math.rad(angle_len)  
+--   local out_ratio = (2*math.pi)/math.rad(angle_len)
+--   local in_arc = (2*math.pi*self.in_rad)/in_ratio  
+--   local out_arc = (2*math.pi*self.out_rad)/out_ratio
+--   return in_arc, out_arc  
+-- end
 
-function block.get_center_y(self)
-  return self.center_y
-end
 
-function block.set_inner_rad(self, val)
-  self.inner_rad= val
-end
 
-function block.get_inner_rad(self)
-  return self.inner_rad
-end
 
-function block.set_outer_rad(self, val)
-  self.outer_rad = val
-end
+return block
 
-function block.get_outer_rad(self)
-  return self.outer_rad
-end
 
-function ring.set_inner_arc(self, val)
-  self.inner_arc= val
-end
 
-function ring.get_inner_arc(self)
-  return self.inner_arc
-end
 
-function ring.set_outer_arc(self, val)
-  self.outer_arc = val
-end
 
-function ring.get_outer_arc(self)
-  return self.outer_arc
-end
 
-function ring.set_image(self, val)
-  self.image = val
-end
 
-function ring.get_image(self)
-  return self.image
-end
